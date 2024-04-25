@@ -28,6 +28,8 @@ pipeline {
         stage('Deploy Docker image') {
             steps {
                 echo '------------Start deploying the Docker image...------------'
+                sh 'docker rm -f myapp-container || true'
+                
                 // Запуск Docker контейнера
                 sh 'docker run -d -p 8888:8888 --name myapp-container myapp-image'
             
