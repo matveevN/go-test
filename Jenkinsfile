@@ -17,7 +17,7 @@ pipeline {
                     echo '------------Start building the Docker image...------------'
                     sh 'go build app.go'
                     
-                    sh 'docker build -t myapp-image .'
+                    
                     
                     echo '------------Docker image created successfully!------------'
                 }
