@@ -31,7 +31,7 @@ pipeline {
                 // Запуск Docker контейнера
                 sh 'docker run -d -p 8888:8888 --name myapp-container myapp-image'
             
-                echo '------------New container added at http://127.0.0.2:8888------------'
+                echo '------------New container added at localhost:8888------------'
             }
         }
         
