@@ -15,7 +15,6 @@ pipeline {
             steps {
                 script {
                     echo '------------Start building the Docker image...------------'
-                    sh 'go get -u github.com/some/package'
                     
                     sh 'go build app.go'
                     
