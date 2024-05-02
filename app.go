@@ -19,7 +19,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", handler)
-	http.Handle("/image.jpg", http.FileServer(http.Dir("."))) // Указываем путь к файлу изображения
+	http.Handle("/home/nikita/Dev-course/golang/image.jpg", http.FileServer(http.Dir("."))) // Указываем путь к файлу изображения
 	fmt.Println("Running demo app. Press Ctrl+C to exit...")
 	log.Fatal(http.ListenAndServe(":8888", nil))
 }
