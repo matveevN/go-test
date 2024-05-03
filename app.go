@@ -19,7 +19,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", handler)
-	http.Handle("/image.jpg", http.FileServer(http.Dir("."))) // Обрабатываем запросы к файлу изображения из текущего каталога
+	http.Handle("/image.png", http.FileServer(http.Dir("."))) // Обрабатываем запросы к файлу изображения из текущего каталога
 	fmt.Println("Running demo app. Press Ctrl+C to exit...")
 	log.Fatal(http.ListenAndServe(":8888", nil))
 }
