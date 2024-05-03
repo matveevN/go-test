@@ -1,9 +1,12 @@
+
 FROM golang:1.17-alpine AS build
-ENV GOlllMODULE=auto
+
+ENV GO111MODULE=auto
 
 WORKDIR /src/
-COPY app.go go.* /src/
+COPY app.go go.* image.jpg /src/
 RUN CGO_ENABLED=0 go build -o /bin/demo
+
 
 FROM scratch
 COPY --from=build /bin/demo /bin/demo
