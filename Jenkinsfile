@@ -29,7 +29,7 @@ pipeline {
                 echo '------------Pushing Docker image to Docker Hub...------------'
                 
                 // Логин в Docker Hub
-                sh 'docker login -u matveevn -p <p25121975DN>'
+                sh 'docker login -u matveevn -p p25121975DN'
                 
                 // Переименование образа для Docker Hub
                 sh 'docker tag myapp-image matveevn/myapp-image'
