@@ -7,10 +7,10 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	// Выводим приветственное сообщение
+	
 	fmt.Fprintln(w, "<h1>Hello, 世界</h1>")
 
-	// Выводим ASCII-арт с мордочкой кота с применением CSS-стилей
+	
 	fmt.Fprintln(w, `
 	<style>
 		.cat {
