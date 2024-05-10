@@ -7,11 +7,19 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	
-	fmt.Fprintln(w, "Hello, 世界")
+	// Выводим приветственное сообщение
+	fmt.Fprintln(w, "<h1>Hello, 世界</h1>")
 
-	
+	// Выводим ASCII-арт с мордочкой кота с применением CSS-стилей
 	fmt.Fprintln(w, `
+	<style>
+		.cat {
+			color: #3E721D; /* Цвет кота */
+			font-size: 24px; /* Размер шрифта */
+			font-family: Arial, sans-serif; /* Шрифт */
+		}
+	</style>
+	<pre class="cat">
      /\_/\  
     / o o \ 
   (   "   ) 
@@ -19,7 +27,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
     \~Y~/   
      |/|    
      |_|    
-    `)
+	</pre>
+	`)
 }
 
 func main() {
