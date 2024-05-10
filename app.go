@@ -7,6 +7,9 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
+	// Устанавливаем заголовок Content-Type для HTML-контента
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+
 	// Выводим приветственное сообщение
 	fmt.Fprintln(w, "<h1>Hello, 世界</h1>")
 
@@ -37,3 +40,4 @@ func main() {
 	fmt.Println("Running demo app. Press Ctrl+C to exit...")
 	log.Fatal(http.ListenAndServe(":8888", nil))
 }
+
