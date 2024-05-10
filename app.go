@@ -7,32 +7,19 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	// Устанавливаем заголовок Content-Type для HTML-контента
-	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	
+	fmt.Fprintln(w, "Hello, 世界")
 
-	// Выводим приветственное сообщение
-	fmt.Fprintln(w, "<h1>Hello, 世界</h1>")
-
-	// Выводим ASCII-арт с изображением кота с применением CSS-стилей
+	
 	fmt.Fprintln(w, `
-	<style>
-		.cat {
-			color: #3E721D; /* Цвет тела кота */
-		}
-		.cat_eyes {
-			color: #FFFF00; /* Цвет глаз кота */
-		}
-	</style>
-	<pre>
-	     /\_/\  
-	    / o o \ 
-	  (   "   ) 
-	   \~(*)~/  
-	    \~Y~/   
-	     |/|    
-	     |_|    
-	</pre>
-	`)
+     /\_/\  
+    / o o \ 
+  (   "   ) 
+   \~(*)~/  
+    \~Y~/   
+     |/|    
+     |_|    
+    `)
 }
 
 func main() {
@@ -40,4 +27,3 @@ func main() {
 	fmt.Println("Running demo app. Press Ctrl+C to exit...")
 	log.Fatal(http.ListenAndServe(":8888", nil))
 }
-
