@@ -14,7 +14,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, `
 	<style>
 		.cat {
-			color: #FFFFF; /* Цвет кота */
+			color: #fffff; /* Цвет кота */
 			font-size: 24px; /* Размер шрифта */
 			font-family: Arial, sans-serif; /* Шрифт */
 		}
